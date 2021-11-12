@@ -1,5 +1,10 @@
 # hardhat-boilerplate
 
+## Pull, Update, Install
+* `./node_modules/.bin/ncu -u`
+* `npm update`
+* `npm install`
+
 ## Hardhat
  - `npm init`
  - `npm install --save-dev hardhat`
