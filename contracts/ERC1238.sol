@@ -84,7 +84,10 @@ contract ERC1238 is IERC1238 {
     }
 
     // @dev Mints `tokenId` and transfers it to `to`.
-    function _mint(address to, uint256 tokenId, string memory _tokenURI) internal virtual {
+    function _mint(
+        address to,
+        uint256 tokenId
+    ) internal virtual {
         require(to != address(0), 'Invalid owner at zero address');
         require(tokenId != 0, 'Token ID cannot be zero');
         require(!_exists(tokenId), 'Token already minted');
@@ -92,7 +95,6 @@ contract ERC1238 is IERC1238 {
 
         _tokens[to] = tokenId;
         _owners[tokenId] = to;
-        _setTokenURI(tokenId, _tokenURI);
 
         emit Minted(to, tokenId, block.timestamp);
     }
