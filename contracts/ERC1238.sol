@@ -72,7 +72,7 @@ contract ERC1238 is IERC1238 {
     {
         require(
             _exists(tokenId),
-            'ERC721Metadata: URI query for nonexistent token'
+            'URI query for nonexistent token'
         );
 
         return _tokenURIs[tokenId];
@@ -105,7 +105,7 @@ contract ERC1238 is IERC1238 {
     {
         require(
             _exists(tokenId),
-            'ERC721Metadata: URI set of nonexistent token'
+            'URI set of nonexistent token'
         );
         _tokenURIs[tokenId] = _tokenURI;
     }

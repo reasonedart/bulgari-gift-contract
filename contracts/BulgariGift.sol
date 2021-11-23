@@ -23,7 +23,7 @@ contract BulgariGift is ERC1238, Ownable {
         _editionEnded = false;
     }
 
-    function editionsIssued() public view returns (uint256) {
+    function mintedTokens() public view returns (uint256) {
         return _giftCounter.current();
     }
 
@@ -35,7 +35,7 @@ contract BulgariGift is ERC1238, Ownable {
         return _editionEnded;
     }
 
-    function mintGift(address to, string memory _tokenURI)
+    function mintToken(address to, string memory _tokenURI)
         public
         virtual
         onlyOwner
@@ -47,10 +47,10 @@ contract BulgariGift is ERC1238, Ownable {
             'Maximum number of this Limited Edition has already been minted'
         );
 
+        _giftCounter.increment();
+
         ERC1238._mint(to, _giftCounter.current());
         ERC1238._setTokenURI(_giftCounter.current(), _tokenURI);
-
-        _giftCounter.increment();
 
         return _giftCounter.current();
     }
