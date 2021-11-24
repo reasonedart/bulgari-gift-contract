@@ -6,12 +6,13 @@ require('./tasks/block-number');
 
 require('dotenv').config();
 
-const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL || 'NO_MAINNET_RPC_URL';
-const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL || 'NO_RINKEBY_RPC_URL';
-const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL || 'NO_KOVAN_RPC_URL';
-const MNEMONIC = process.env.MNEMONIC || 'NO_MNEMONIC';
+const POLYGON_RPC_URL = process.env.POLYGON_RPC_URL || 'NO_POLYGON_RPC_URL';
+const POLYGON_MUMBAI_RPC_URL =
+'https://polygon-mumbai.g.alchemy.com/v2/WaThHKR4s91jlsCnvLYuCcAHwoIADrnz';
+const RART_PRIVATE_KEY = process.env.RART_PRIVATE_KEY || 'NO_RART_PRIVATE_KEY';
 const PRIVATE_KEY = process.env.PRIVATE_KEY || 'NO_PRIV_KEY';
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || 'NO_ETHERSCAN_API_KEY';
+const ETHERSCAN_API_KEY =
+    process.env.ETHERSCAN_API_KEY || 'NO_ETHERSCAN_API_KEY';
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
@@ -29,28 +30,16 @@ module.exports = {
             //   url: MAINNET_RPC_URL
             // }
         },
-        localhost: {},
-        kovan: {
-            url: KOVAN_RPC_URL,
-            accounts: [PRIVATE_KEY],
-            saveDeployments: true,
-            // accounts: {
-            //     mnemonic: MNEMONIC,
-            // },
-        },
-        rinkeby: {
-            url: RINKEBY_RPC_URL,
-            accounts: [PRIVATE_KEY],
-            saveDeployments: true,
-            // accounts: {
-            //     mnemonic: MNEMONIC,
-            // },
-        },
-        ganache: {
+        localhost: {
             url: 'http://localhost:8545',
-            accounts: {
-                mnemonic: MNEMONIC,
-            },
+        },
+        polygon: {
+            url: POLYGON_RPC_URL,
+            accounts: [RART_PRIVATE_KEY],
+        },
+        mumbai: {
+            url: POLYGON_MUMBAI_RPC_URL,
+            accounts: [PRIVATE_KEY],
         },
     },
 
