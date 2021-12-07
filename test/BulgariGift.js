@@ -9,7 +9,7 @@ let guest = null;
 let attacker = null;
 
 describe('Bulgari Christmas Gift Smartcontract', function () {
-    it('Should be deployed with right prameters', async function () {
+    it('Should be deployed with right parameters', async function () {
         const name = 'Bulgari Christmas Gift';
         const symbol = 'BVLG';
         const guests = 50;

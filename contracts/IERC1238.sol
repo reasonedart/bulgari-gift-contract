@@ -1,6 +1,5 @@
-//SPDX-License-Identifier: Unlicense
-pragma solidity ^0.8.4;
-
+// SPDX-License-Identifier: BSD 3-Clause
+pragma solidity 0.8.4;
 
 interface IERC1238 {
     // @dev Emitted when `tokenId` token is minted to `to`, an address.

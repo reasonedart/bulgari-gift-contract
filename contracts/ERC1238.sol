@@ -1,5 +1,5 @@
-//SPDX-License-Identifier: Unlicense
-pragma solidity ^0.8.4;
+// SPDX-License-Identifier: BSD 3-Clause
+pragma solidity 0.8.4;
 
 import {IERC1238} from './IERC1238.sol';
 
@@ -47,7 +47,7 @@ contract ERC1238 is IERC1238 {
         return _tokens[owner];
     }
 
-    // Returns the owner of a given token ID, reverts if the token does not exist
+    // Returns the owner of a given token ID, reverts if token does not exist
     function ownerOf(uint256 tokenId)
         public
         view
@@ -64,16 +64,14 @@ contract ERC1238 is IERC1238 {
         return owner;
     }
 
+    // Returns token URI of a given tokenID, reverts if token does not exist
     function tokenURI(uint256 tokenId)
         public
         view
         virtual
         returns (string memory)
     {
-        require(
-            _exists(tokenId),
-            'URI query for nonexistent token'
-        );
+        require(_exists(tokenId), 'URI query for nonexistent token');
 
         return _tokenURIs[tokenId];
     }
@@ -84,10 +82,7 @@ contract ERC1238 is IERC1238 {
     }
 
     // @dev Mints `tokenId` and transfers it to `to`.
-    function _mint(
-        address to,
-        uint256 tokenId
-    ) internal virtual {
+    function _mint(address to, uint256 tokenId) internal virtual {
         require(to != address(0), 'Invalid owner at zero address');
         require(tokenId != 0, 'Token ID cannot be zero');
         require(!_exists(tokenId), 'Token already minted');
@@ -99,14 +94,12 @@ contract ERC1238 is IERC1238 {
         emit Minted(to, tokenId, block.timestamp);
     }
 
+    // Sets token URI for a given token ID, reverts if token does not exist
     function _setTokenURI(uint256 tokenId, string memory _tokenURI)
         internal
         virtual
     {
-        require(
-            _exists(tokenId),
-            'URI set of nonexistent token'
-        );
+        require(_exists(tokenId), 'URI set of nonexistent token');
         _tokenURIs[tokenId] = _tokenURI;
     }
 

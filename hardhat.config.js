@@ -8,7 +8,7 @@ require('dotenv').config();
 
 const POLYGON_RPC_URL = process.env.POLYGON_RPC_URL || 'NO_POLYGON_RPC_URL';
 const POLYGON_MUMBAI_RPC_URL =
-'https://polygon-mumbai.g.alchemy.com/v2/WaThHKR4s91jlsCnvLYuCcAHwoIADrnz';
+    process.env.POLYGON_MUMBAI_RPC_URL || 'POLYGON_MUMBAI_RPC_URL';
 const RART_PRIVATE_KEY = process.env.RART_PRIVATE_KEY || 'NO_RART_PRIVATE_KEY';
 const PRIVATE_KEY = process.env.PRIVATE_KEY || 'NO_PRIV_KEY';
 const ETHERSCAN_API_KEY =
