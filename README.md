@@ -2,6 +2,8 @@
 
 <h1 align='center'>Bulgari Gift Smartcontract</h1>
 
+Polygon Address - [0xea58a24502f065a8cd53b94424d7b0e82b6e697c](https://polygonscan.com/address/0xea58a24502f065a8cd53b94424d7b0e82b6e697c#readContract)
+
 Mints Limited Edition of a Digital Artwork as Non-Transferable NFTs. Each minted token represents a gift for a guest invited to a physical event. The contract:
 * only allows contract owner to mint new tokens
 * mints no more than one token for the same guest
@@ -22,7 +24,7 @@ The ownership of this token is (a) a public statement about the holder, is (b) a
 git clone https://github.com/reasonedart/bulgari-gift-contract.git
 
 # Go into the repository
-cd bulgar-gift-contract
+cd bulgari-gift-contract
 
 # Install dependencies
 yarn install
@@ -43,5 +45,3 @@ npx hardhat run scripts/deploy.js
 # OR, deploy on Polygon testnet
 npx hardhat run scripts/deploy.js --network mumbai
 ```
-
-### Minting
