@@ -14,7 +14,7 @@ Mints Limited Edition of a Digital Artwork as _Soulbound Tokens_ (**SBT**, also 
 * tokens aren't burnable
 
 ## Why Soulbound Tokens
-The ownership of this token is (a) a public statement about the holder, is (b) a possible set of rights over the digital artwork it encapsulates, and (c) must serve no lucrative purposes. Standards such as `ERC-721` or `ERC-1155` are too complex for the use-case and require disabling some of their core functionalities (especially for ensuring (c)). This Smartcontract leverages ideas from the `ERC-1238` [standard discussion](https://github.com/ethereum/EIPs/issues/1238), can be improved in multiple ways, and poses itself as the first of a series of experimentations.
+The ownership of this token is (a) an eternal and public statement about the holder, is (b) a possible set of rights over the digital artwork it encapsulates, and (c) must serve no lucrative purposes. Standards such as `ERC-721` or `ERC-1155` are too complex for the use-case and require disabling some of their core functionalities (especially for ensuring (c)). This Smartcontract leverages ideas from the `ERC-1238` [standard discussion](https://github.com/ethereum/EIPs/issues/1238), can be improved in multiple ways, and poses itself as the first of a series of experimentations.
 
 ## Usage
 
