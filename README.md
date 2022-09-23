@@ -7,14 +7,14 @@
 Polygon Address - [0xea58a24502f065a8cd53b94424d7b0e82b6e697c](https://polygonscan.com/address/0xea58a24502f065a8cd53b94424d7b0e82b6e697c#readContract)
 
 Mints Limited Edition of a Digital Artwork as _Address Bound Tokens_ (**ABT**, also called Non-Transferable NFTs, or Soulbound Tokens if attached to an identity). Each minted token can be given to a participant invited to a physical event. The contract:
-* only allows contract owner to mint new tokens
-* mints no more than one token for the same guest
-* mints no more tokens than the amount of invited guests
-* allows to forever end minting before reaching the number of invited guests (some guests may not claim it)
-* tokens aren't burnable
+* only allows contract owner to mint new tokens;
+* mints no more than one token for the same guest;
+* mints no more tokens than the amount of invited guests;
+* allows to forever end minting before reaching the number of invited guests (some guests may not claim it);
+* tokens aren't burnable.
 
 ## Why Address Bound Tokens
-The ownership of this token is (a) an eternal and public statement about the holder, is (b) a possible set of rights over the digital artwork it encapsulates, and (c) must serve no lucrative purposes. Standards such as `ERC-721` or `ERC-1155` are too complex for the use-case and require disabling some of their core functionalities (especially for ensuring (c)). This Smartcontract leverages ideas from the `ERC-1238` [standard discussion](https://github.com/ethereum/EIPs/issues/1238), can be improved in multiple ways, and poses itself as the first of a series of experimentations.
+The ownership of this token is (a) an eternal and public statement about the holder, is (b) a possible set of rights over the digital artwork it encapsulates, and (c) must serve no lucrative purposes. Standards such as `ERC-721` or `ERC-1155` are too complex for the use-case and require disabling some of their core functionalities (especially for ensuring (c)). This Smartcontract leverages ideas from the `ERC-1238` [standard discussion](https://github.com/ethereum/EIPs/issues/1238), can be improved in multiple ways, and poses itself as the first of a series of experiments.
 
 ## Usage
 
